@@ -3,8 +3,9 @@ use std::fs::{File};
 use std::io::{Read, BufRead, BufReader};
 use std::path::{Path, PathBuf};
 
-const NUMBER_REDUCER: i8 = 10;
-const NUMBER_MAPPER: i8 = 16;
+const NUMBER_REDUCER: u8 = 10;
+const NUMBER_MAPPER: u8 = 16;
+const NUMBER_BYTES_SURPLUS: usize = 10;
 
 fn main() {
     // Create a Path object of our directory
@@ -31,7 +32,7 @@ fn main() {
     println!("----------------------------------------------------");
 
     // Declaring a slightly bigger chunk size to prevent reallocating if the chunk would cut a word at the end
-    let bigger_chunk_size = base_chunk_size + 10;
+    let bigger_chunk_size = base_chunk_size + NUMBER_BYTES_SURPLUS;
 
     let chunk_vector: Vec<Vec<u8>> = read_all_files(&mut buf_reader_vector, base_chunk_size, bigger_chunk_size).unwrap();
 }
@@ -68,6 +69,9 @@ fn read_n_bytes(buf_reader: &mut BufReader<File>, chunk: &mut Vec<u8>, chunk_siz
 
     nb_byte_read += buf_reader.read_until(b' ', chunk)?;
 
+    if nb_byte_read > (chunk_size as usize) + NUMBER_BYTES_SURPLUS {
+        println!("Warning, chunk got reallocated: {}", nb_byte_read - chunk_size as usize);
+    }
     //println!("Res2: {:?}", String::from_utf8(chunk).unwrap());
 
     Ok(nb_byte_read)
