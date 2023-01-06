@@ -35,6 +35,13 @@ fn main() {
     let bigger_chunk_size = base_chunk_size + NUMBER_BYTES_SURPLUS;
 
     let chunk_vector: Vec<Vec<u8>> = read_all_files(&mut buf_reader_vector, base_chunk_size, bigger_chunk_size).unwrap();
+
+    println!("Number chunk: {}", chunk_vector.len());
+
+    for (i, chunk) in chunk_vector.iter().enumerate() {
+        println!("Size of the chunk {}: {} bytes", i, chunk.len());
+    }
+
 }
 
 fn open_files(dir_path: &Path, vec_file: &mut Vec<BufReader<File>>) -> std::io::Result<u64> {
@@ -45,13 +52,17 @@ fn open_files(dir_path: &Path, vec_file: &mut Vec<BufReader<File>>) -> std::io::
     let paths = fs::read_dir(dir_path)?;
     let mut total_bytes: u64 = 0;
 
+    let mut i = 0;
     for path in paths {
         let path: PathBuf = path?.path();
         let path: &Path = path.as_path();
 
         let file = File::open(path)?;
         total_bytes += file.metadata()?.len();
+
+        println!("{}: {}", i, path.display());
         vec_file.push(BufReader::new(file));
+        i += 1;
     }
 
     Ok(total_bytes)
@@ -64,13 +75,13 @@ fn read_n_bytes(buf_reader: &mut BufReader<File>, chunk: &mut Vec<u8>, chunk_siz
     Returns the number of bytes read and the chunk.
      */
 
-    let mut nb_byte_read = buf_reader.take(chunk_size).read_to_end(chunk)?;
+    let mut nb_byte_read = buf_reader.take(chunk_size - (chunk.len() as u64)).read_to_end(chunk)?;
     //println!("Res: {:?}", String::from_utf8(chunk).unwrap());
 
     nb_byte_read += buf_reader.read_until(b' ', chunk)?;
 
     if nb_byte_read > (chunk_size as usize) + NUMBER_BYTES_SURPLUS {
-        println!("Warning, chunk got reallocated: {}", nb_byte_read - chunk_size as usize);
+        println!("Warning, chunk got reallocated: {}", chunk.len() - chunk_size as usize);
     }
     //println!("Res2: {:?}", String::from_utf8(chunk).unwrap());
 
@@ -91,6 +102,7 @@ fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_size:
     let mut chunk_index: u8 = 0;
     // Declaring the first chunk
     let mut chunk: Vec<u8> = Vec::with_capacity(bigger_chunk_size as usize);
+    println!("Loading [CHUNK][{}] ", chunk_index);
 
     // Byte read counter
     let mut nb_byte_read: usize = 0;
@@ -98,19 +110,28 @@ fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_size:
     // Tracking the BufReader index for debug purposes
     let mut buf_index: u8 = 0;
     let mut buf_reader: BufReader<File> = buf_reader_vector.pop().unwrap();
+    println!("Loading [FILE][{}] ", buf_index);
 
     // While there are BufReaders remaining
-    while !buf_reader_vector.is_empty() {
-        println!("File number: {}", buf_index);
-        println!("Chunk number: {}", chunk_index);
+    loop {
         nb_byte_read += read_n_bytes(&mut buf_reader, &mut chunk, base_chunk_size as u64)?;
+
+        println!("[CHUNK][{}]: {}%", buf_index, (chunk.len() * 100) / base_chunk_size);
 
         // If the number of bytes read is inferior to the chunk_size, it means the current BufReader has no longer data left
         if nb_byte_read < base_chunk_size {
+            // If the current BufReader is empty and there is no more bufReader break
+            if buf_reader_vector.is_empty() {
+                // Save the last chunk
+                chunk_vector.push(chunk);
+                break;
+            }
+
             buf_index += 1;
 
             // pop a new BufReader
             buf_reader = buf_reader_vector.pop().unwrap();
+            println!("Loading [FILE][{}] ", buf_index);
         }
 
         // If the current chunk len is superior or equal to the size
@@ -120,14 +141,12 @@ fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_size:
             // Save the chunk into the vector before creating a new one
             chunk_vector.push(chunk);
             chunk = Vec::with_capacity(bigger_chunk_size);
+            println!("Loading [CHUNK][{}] ", chunk_index);
 
             // Reset byte read counter when a chunk is full
             nb_byte_read = 0
         }
     }
-
-    println!("File number: {}", buf_index);
-    println!("Chunk number: {}", chunk_index);
 
     Ok(chunk_vector)
 }
