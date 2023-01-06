@@ -1,7 +1,10 @@
 mod splitter;
 use crate::swc::splitter::{open_files, read_all_files};
 
-use std::fs;
+mod mapper;
+use crate::swc::mapper::main_mapper;
+
+use std::{fs, thread};
 use std::fs::{File};
 use std::io::{Read, BufRead, BufReader};
 use std::path::{Path, PathBuf};
@@ -36,11 +39,26 @@ pub fn launch_map_reduce(directory_path: &String, number_mapper: u8, number_redu
     // Declaring a slightly bigger chunk size to prevent reallocating if the chunk would cut a word at the end
     let bigger_chunk_size = base_chunk_size + NUMBER_BYTES_SURPLUS;
 
-    let chunk_vector: Vec<Vec<u8>> = read_all_files(&mut buf_reader_vector, base_chunk_size, bigger_chunk_size, NUMBER_BYTES_SURPLUS, number_mapper).unwrap();
+    let mut chunk_vector: Vec<Vec<u8>> = read_all_files(&mut buf_reader_vector, base_chunk_size, bigger_chunk_size, NUMBER_BYTES_SURPLUS, number_mapper).unwrap();
 
     println!("Number chunk: {}", chunk_vector.len());
 
     for (i, chunk) in chunk_vector.iter().enumerate() {
         println!("Size of the chunk {}: {} bytes", i, chunk.len());
+    }
+
+    // Launching threads
+    let mut handles = Vec::new();
+
+    for i in 0..number_mapper {
+        let chunk = chunk_vector.pop().unwrap();
+
+        handles.push(thread::spawn(move || {
+            main_mapper(i, chunk);
+        }));
+    }
+
+    for handle in handles {
+        handle.join().unwrap();
     }
 }
