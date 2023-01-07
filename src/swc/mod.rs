@@ -6,8 +6,8 @@ use crate::swc::mapper::main_mapper;
 
 use std::{fs, thread};
 use std::fs::{File};
-use std::io::{Read, BufRead, BufReader};
-use std::path::{Path, PathBuf};
+use std::io::{BufReader};
+use std::path::{Path};
 
 const NUMBER_BYTES_SURPLUS: usize = 10;
 
@@ -54,11 +54,19 @@ pub fn launch_map_reduce(directory_path: &String, number_mapper: u8, number_redu
         let chunk = chunk_vector.pop().unwrap();
 
         handles.push(thread::spawn(move || {
-            main_mapper(i, chunk);
+            main_mapper(i, chunk)
         }));
     }
 
-    for handle in handles {
-        handle.join().unwrap();
+    let mut i = 0;
+    let mut total_words = 0;
+
+    for handle in handles{
+        let words = handle.join().unwrap().unwrap();
+        println!("Thread {}: {:?} words", i, words.len());
+        total_words += words.len();
+        i += 1;
     }
+
+    println!("Total words: {}", total_words);
 }
