@@ -47,13 +47,15 @@ pub fn launch_map_reduce(directory_path: &String, number_mapper: u8, number_redu
         println!("Size of the chunk {}: {} bytes", i, chunk.len());
     }
 
-    // Launching threads
+    // Defining thread pool
     let mut handles = Vec::new();
 
+    // Launching the threads
     for i in 0..number_mapper {
         let chunk = chunk_vector.pop().unwrap();
 
         handles.push(thread::spawn(move || {
+            // Calling main mapper function + implicit return of Thread result
             main_mapper(i, chunk)
         }));
     }
@@ -61,6 +63,7 @@ pub fn launch_map_reduce(directory_path: &String, number_mapper: u8, number_redu
     let mut i = 0;
     let mut total_words = 0;
 
+    // Printing some data
     for handle in handles{
         let words = handle.join().unwrap().unwrap();
         println!("Thread {}: {:?} words", i, words.len());
