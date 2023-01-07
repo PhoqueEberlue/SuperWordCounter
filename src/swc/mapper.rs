@@ -9,9 +9,12 @@ pub fn main_mapper(thread_number: u8, chunk: Vec<u8>) -> thread::Result<Vec<Vec<
     for char_code in chunk {
         // if char code is equal to space or carriage return
         if char_code == 32 as u8 || char_code == 13 as u8 {
-            word_vec.push(current_word);
-            current_word = Vec::new();
-        } else if !word_vec.is_empty() {
+            if !current_word.is_empty() {
+                word_vec.push(current_word);
+                current_word = Vec::new();
+            }
+
+        } else {
             current_word.push(char_code);
         }
     }
