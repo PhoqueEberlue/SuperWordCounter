@@ -48,7 +48,7 @@ fn read_n_bytes(buf_reader: &mut BufReader<File>, chunk: &mut Vec<u8>, chunk_siz
 }
 
 
-pub fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_size: usize, bigger_chunk_size: usize, number_bytes_surplus: usize, number_mapper: u8) -> std::io::Result<Vec<Vec<u8>>> {
+pub fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_size: usize, bigger_chunk_size: usize, number_bytes_surplus: usize, number_mapper: u16) -> std::io::Result<Vec<Vec<u8>>> {
     /*
     Read all files in buf_reader_vector and fill as many chunks as there are mapper.
     Returns a vector containing the chunks. Each chunk is a vector of u8.

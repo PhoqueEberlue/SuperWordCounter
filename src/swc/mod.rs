@@ -1,7 +1,9 @@
 mod splitter;
+mod mapper;
+
 use crate::swc::splitter::{open_files, read_all_files};
 
-mod mapper;
+
 use crate::swc::mapper::main_mapper;
 
 use std::{fs, thread};
@@ -11,7 +13,7 @@ use std::path::{Path};
 
 const NUMBER_BYTES_SURPLUS: usize = 10;
 
-pub fn launch_map_reduce(directory_path: &String, number_mapper: u8, number_reducer: u8) {
+pub fn launch_map_reduce(directory_path: &String, number_mapper: u16, number_reducer: u16) {
 
     // Create a Path object of our directory
     let dir_path: &Path = Path::new(directory_path.as_str());
@@ -56,20 +58,42 @@ pub fn launch_map_reduce(directory_path: &String, number_mapper: u8, number_redu
 
         handles.push(thread::spawn(move || {
             // Calling main mapper function + implicit return of Thread result
-            main_mapper(i, chunk)
+            main_mapper(i, chunk, number_reducer)
         }));
     }
 
-    let mut i = 0;
-    let mut total_words = 0;
+
+    let mut index_mapper = 0;
+    let mut index_hash_map = 0;
 
     // Printing some data
-    for handle in handles{
-        let words = handle.join().unwrap().unwrap();
-        println!("Thread {}: {:?} words", i, words.len());
-        total_words += words.len();
-        i += 1;
+    for handle in handles {
+        let hash_map_vector = handle.join().unwrap().unwrap();
+
+        println!("Mapper {} finished", index_mapper);
+
+        for hash_map in hash_map_vector {
+            println!("    Hash Map {}", index_hash_map);
+
+            let mut i = 0;
+            for val in hash_map.keys() {
+                println!("         {:?}: {}", String::from_utf8(val.clone()).unwrap(), hash_map.get(val).unwrap());
+                i+=1;
+                if i > 4 {
+                    break;
+                }
+            }
+
+            index_hash_map += 1;
+        }
+
+        index_hash_map = 0;
+
+        index_mapper += 1;
+
+
+        //println!("Thread {}: {:?} words", i, words.len());
+        //total_words += words.len();
     }
 
-    println!("Total words: {}", total_words);
 }
