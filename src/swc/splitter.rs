@@ -3,7 +3,7 @@ use std::fs::{File};
 use std::io::{Read, BufRead, BufReader};
 use std::path::{Path, PathBuf};
 
-pub fn open_files(dir_path: &Path, vec_file: &mut Vec<BufReader<File>>) -> std::io::Result<u64> {
+fn open_files(dir_path: &Path, vec_file: &mut Vec<BufReader<File>>) -> std::io::Result<u64> {
     /*
     Open every file in the provided path and fill the vector with bufReader for each file.
     Returns the total length of every files in bytes.
@@ -50,7 +50,7 @@ fn read_n_bytes(buf_reader: &mut BufReader<File>, chunk: &mut Vec<u8>, chunk_siz
 }
 
 
-pub fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_size: usize, bigger_chunk_size: usize, number_bytes_surplus: usize, number_mapper: u16) -> std::io::Result<Vec<Vec<u8>>> {
+fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_size: usize, bigger_chunk_size: usize, number_bytes_surplus: usize, number_mapper: u16) -> std::io::Result<Vec<Vec<u8>>> {
     /*
     Read all files in buf_reader_vector and fill as many chunks as there are mapper.
     Returns a vector containing the chunks. Each chunk is a vector of u8.
@@ -121,3 +121,52 @@ pub fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_s
     Ok(chunk_vector)
 }
 
+// Number of bytes of surplus for each chunk that will be filled by the mappers
+const NUMBER_BYTES_SURPLUS: usize = 100;
+
+pub fn split_files_from_path(directory_path: &String, number_mapper: u16) -> std::io::Result<Vec<Vec<u8>>> {
+    // Create a Path object of our directory
+    let dir_path: &Path = Path::new(directory_path.as_str());
+
+    // Counting the number of files
+    let file_count = fs::read_dir(dir_path)?.count();
+
+    // Initializing a vector to store BufReader of each files
+    let mut buf_reader_vector: Vec<BufReader<File>> = Vec::with_capacity(file_count);
+
+    // Open files
+    let total_bytes: u64 = open_files(dir_path, &mut buf_reader_vector)?;
+
+    #[cfg(debug_assertions)]
+    {
+        println!("----------------------------------------------------");
+        println!("Total number of bytes: {}", total_bytes);
+        println!("Number of mapper: {}", number_mapper);
+    }
+
+    // Chunk size is calculated dividing the total size of the files by the number of mapper
+    // Each mapper have a similar number of byte to work on
+    let base_chunk_size: usize = total_bytes as usize / number_mapper as usize;
+
+    #[cfg(debug_assertions)]
+    {
+        println!("{}/{} = {} bytes for each mapper", total_bytes, number_mapper, base_chunk_size);
+        println!("----------------------------------------------------");
+    }
+
+    // Declaring a slightly bigger chunk size to prevent reallocating if the chunk would cut a word at the end
+    let bigger_chunk_size = base_chunk_size + NUMBER_BYTES_SURPLUS;
+
+    let mut chunk_vector: Vec<Vec<u8>> = read_all_files(&mut buf_reader_vector, base_chunk_size, bigger_chunk_size, NUMBER_BYTES_SURPLUS, number_mapper)?;
+
+    #[cfg(debug_assertions)]
+    {
+        println!("Number chunk: {}", chunk_vector.len());
+
+        for (i, chunk) in chunk_vector.iter().enumerate() {
+            println!("Size of the chunk {}: {} bytes", i, chunk.len());
+        }
+    }
+
+    Ok(chunk_vector)
+}
