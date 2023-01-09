@@ -1,7 +1,8 @@
 use std::{thread};
 use std::collections::{HashMap};
+use std::thread::Thread;
 
-pub fn map(thread_number: u16, chunk: Vec<u8>, number_reducer: u16, to_lower: bool) -> thread::Result<Vec<HashMap<Vec<u8>, u64>>> {
+fn map(thread_number: u16, chunk: Vec<u8>, number_reducer: u16, to_lower: bool) -> thread::Result<Vec<HashMap<Vec<u8>, u64>>> {
     /*
     Main function of the mapper that should be called by the mapper thread.
     Returns a thread result containing a vector of words.
@@ -65,4 +66,40 @@ fn get_word_modulus(word: &Vec<u8>, modulus: u16) -> u16 {
      */
 
     word.len() as u16 % modulus
+}
+
+pub fn start_mapper_threads(mut chunk_vector: Vec<Vec<u8>>, number_mapper: u16, number_reducer: u16, to_lower: bool) -> thread::Result<Vec<Vec<HashMap<Vec<u8>, u64>>>> {
+    // Defining thread pool
+    let mut handles_mapper = Vec::with_capacity(number_mapper as usize);
+
+    // Launching mapper threads
+    for i in 0..number_mapper {
+        let chunk = chunk_vector.pop().unwrap();
+
+        handles_mapper.push(thread::spawn(move || {
+            // Calling main mapper function + implicit return of Thread result
+            map(i, chunk, number_reducer, to_lower)
+        }));
+    }
+
+    let mut len_hash_map_vec: Vec<u32> = Vec::with_capacity(number_reducer as usize);
+    for _ in 0..number_reducer {
+        len_hash_map_vec.push(0);
+    }
+
+    let mut hash_map_vector_vector: Vec<Vec<HashMap<Vec<u8>, u64>>> = Vec::with_capacity(number_reducer as usize);
+
+    for handle in handles_mapper {
+        let hash_map_vector = handle.join().unwrap().unwrap();
+
+        hash_map_vector_vector.push(hash_map_vector);
+    }
+
+
+    #[cfg(debug_assertions)]
+    for (i, len_hash_map) in len_hash_map_vec.iter().enumerate() {
+        println!("Reducer {} will receive {} words", i, len_hash_map);
+    }
+
+    Ok(hash_map_vector_vector)
 }
