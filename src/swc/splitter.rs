@@ -41,7 +41,7 @@ fn read_n_bytes(buf_reader: &mut BufReader<File>, chunk: &mut Vec<u8>, chunk_siz
     nb_byte_read += buf_reader.read_until(b' ', chunk)?;
 
     #[cfg(debug_assertions)]
-    if nb_byte_read > (chunk_size as usize) + number_bytes_surplus {
+    if chunk.len() > (chunk_size as usize) + number_bytes_surplus {
         println!("Warning, chunk got reallocated: {}", chunk.len() - chunk_size as usize);
     }
     //println!("Res2: {:?}", String::from_utf8(chunk).unwrap());
