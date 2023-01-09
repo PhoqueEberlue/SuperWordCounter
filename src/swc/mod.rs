@@ -8,7 +8,7 @@ use std::fs::{File};
 use std::io::{BufReader};
 use std::path::{Path};
 
-const NUMBER_BYTES_SURPLUS: usize = 10;
+const NUMBER_BYTES_SURPLUS: usize = 100;
 
 pub fn launch_map_reduce(directory_path: &String, number_mapper: u16, number_reducer: u16, to_lower: bool) {
 
