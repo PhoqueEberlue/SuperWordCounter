@@ -19,6 +19,7 @@ pub fn open_files(dir_path: &Path, vec_file: &mut Vec<BufReader<File>>) -> std::
         let file = File::open(path)?;
         total_bytes += file.metadata()?.len();
 
+        #[cfg(debug_assertions)]
         println!("{}: {}", i, path.display());
         vec_file.push(BufReader::new(file));
         i += 1;
@@ -39,6 +40,7 @@ fn read_n_bytes(buf_reader: &mut BufReader<File>, chunk: &mut Vec<u8>, chunk_siz
 
     nb_byte_read += buf_reader.read_until(b' ', chunk)?;
 
+    #[cfg(debug_assertions)]
     if nb_byte_read > (chunk_size as usize) + number_bytes_surplus {
         println!("Warning, chunk got reallocated: {}", chunk.len() - chunk_size as usize);
     }
@@ -61,6 +63,8 @@ pub fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_s
     let mut chunk_index: u8 = 0;
     // Declaring the first chunk
     let mut chunk: Vec<u8> = Vec::with_capacity(bigger_chunk_size as usize);
+
+    #[cfg(debug_assertions)]
     println!("Loading [CHUNK][{}] ", chunk_index);
 
     // Byte read counter
@@ -69,12 +73,15 @@ pub fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_s
     // Tracking the BufReader index for debug purposes
     let mut buf_index: u8 = 0;
     let mut buf_reader: BufReader<File> = buf_reader_vector.pop().unwrap();
+
+    #[cfg(debug_assertions)]
     println!("Loading [FILE][{}] ", buf_index);
 
     // While there are BufReaders remaining
     loop {
         nb_byte_read += read_n_bytes(&mut buf_reader, &mut chunk, base_chunk_size as u64, number_bytes_surplus)?;
 
+        #[cfg(debug_assertions)]
         println!("[CHUNK][{}]: {}%", buf_index, (chunk.len() * 100) / base_chunk_size);
 
         // If the number of bytes read is inferior to the chunk_size, it means the current BufReader has no longer data left
@@ -90,6 +97,8 @@ pub fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_s
 
             // pop a new BufReader
             buf_reader = buf_reader_vector.pop().unwrap();
+
+            #[cfg(debug_assertions)]
             println!("Loading [FILE][{}] ", buf_index);
         }
 
@@ -100,6 +109,8 @@ pub fn read_all_files(buf_reader_vector: &mut Vec<BufReader<File>>, base_chunk_s
             // Save the chunk into the vector before creating a new one
             chunk_vector.push(chunk);
             chunk = Vec::with_capacity(bigger_chunk_size);
+
+            #[cfg(debug_assertions)]
             println!("Loading [CHUNK][{}] ", chunk_index);
 
             // Reset byte read counter when a chunk is full

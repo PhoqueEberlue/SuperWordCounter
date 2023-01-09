@@ -5,4 +5,15 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[profile.dev-debug]
+inherits = "dev"
+debug-assertions = true
+overflow-checks = true
+
+[profile.release-opt]
+inherits = "release"
+debug-assertions = false
+overflow-checks = false
+opt-level = 3
+
 [dependencies]
