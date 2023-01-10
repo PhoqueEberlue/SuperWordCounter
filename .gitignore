@@ -12,3 +12,5 @@ Cargo.lock
 .idea/
 
 input/
+
+benchmark/flamegraph/perf.data*
