@@ -27,7 +27,7 @@ fn map(thread_number: u16, chunk: Vec<u8>, number_reducer: u16, to_lower: bool) 
             // If current word vector is not empty
             if !current_word.is_empty() {
                 // Gets the index of which reducer the current word will be provided
-                let index_hash_map = get_word_modulus(&current_word, number_reducer);
+                let index_hash_map = get_word_modulus_len(&current_word, number_reducer);
 
                 // Gets the hash map
                 let hash_map: &mut HashMap<Vec<u8>, u64> = hash_map_vector.get_mut(index_hash_map as usize).unwrap();
@@ -52,20 +52,25 @@ fn map(thread_number: u16, chunk: Vec<u8>, number_reducer: u16, to_lower: bool) 
     Ok(hash_map_vector)
 }
 
-fn get_word_modulus(word: &Vec<u8>, modulus: u16) -> u16 {
+fn get_word_modulus_len(word: &Vec<u8>, modulus: u16) -> u16 {
+    /*
+    Returns a modulus of the length of the word
+     */
+
+    word.len() as u16 % modulus
+}
+
+fn get_word_modulus_sum_ascii_code(word: &Vec<u8>, modulus: u16) -> u16 {
     /*
     Returns a modulus of the ASCII code of the word
      */
-    /*
     let mut res: u16 = 0;
 
     for char in word.iter() {
         res += *char as u16;
     }
 
-     */
-
-    word.len() as u16 % modulus
+    res % modulus
 }
 
 pub fn start_mapper_threads(mut chunk_vector: Vec<Vec<u8>>, number_mapper: u16, number_reducer: u16, to_lower: bool) -> thread::Result<Vec<Vec<HashMap<Vec<u8>, u64>>>> {
