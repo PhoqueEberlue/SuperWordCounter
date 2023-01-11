@@ -157,7 +157,7 @@ pub fn split_files_from_path(directory_path: &String, number_mapper: u16) -> std
     // Declaring a slightly bigger chunk size to prevent reallocating if the chunk would cut a word at the end
     let bigger_chunk_size = base_chunk_size + NUMBER_BYTES_SURPLUS;
 
-    let mut chunk_vector: Vec<Vec<u8>> = read_all_files(&mut buf_reader_vector, base_chunk_size, bigger_chunk_size, NUMBER_BYTES_SURPLUS, number_mapper)?;
+    let chunk_vector: Vec<Vec<u8>> = read_all_files(&mut buf_reader_vector, base_chunk_size, bigger_chunk_size, NUMBER_BYTES_SURPLUS, number_mapper)?;
 
     #[cfg(debug_assertions)]
     {

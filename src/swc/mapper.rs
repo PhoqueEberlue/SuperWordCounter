@@ -1,8 +1,8 @@
 use std::{thread};
 use std::collections::{HashMap};
-use std::thread::Thread;
+use std::process::exit;
 
-fn map(thread_number: u16, chunk: Vec<u8>, number_reducer: u16, to_lower: bool) -> thread::Result<Vec<HashMap<Vec<u8>, u64>>> {
+fn map(thread_number: u16, chunk: Vec<u8>, number_reducer: u16, to_lower: bool, modulus_function: String) -> thread::Result<Vec<HashMap<Vec<u8>, u64>>> {
     /*
     Main function of the mapper that should be called by the mapper thread.
     Returns a thread result containing a vector of words.
@@ -27,7 +27,12 @@ fn map(thread_number: u16, chunk: Vec<u8>, number_reducer: u16, to_lower: bool) 
             // If current word vector is not empty
             if !current_word.is_empty() {
                 // Gets the index of which reducer the current word will be provided
-                let index_hash_map = get_word_modulus_len(&current_word, number_reducer);
+
+                let index_hash_map = match modulus_function.as_str() {
+                    "len" => get_word_modulus_len(&current_word, number_reducer),
+                    "ascii" => get_word_modulus_sum_ascii_code(&current_word, number_reducer),
+                    _ => { println!("Unknown modulus function for mapper {}", modulus_function); exit(1) }
+                };
 
                 // Gets the hash map
                 let hash_map: &mut HashMap<Vec<u8>, u64> = hash_map_vector.get_mut(index_hash_map as usize).unwrap();
@@ -73,7 +78,7 @@ fn get_word_modulus_sum_ascii_code(word: &Vec<u8>, modulus: u16) -> u16 {
     res % modulus
 }
 
-pub fn start_mapper_threads(mut chunk_vector: Vec<Vec<u8>>, number_mapper: u16, number_reducer: u16, to_lower: bool) -> thread::Result<Vec<Vec<HashMap<Vec<u8>, u64>>>> {
+pub fn start_mapper_threads(mut chunk_vector: Vec<Vec<u8>>, number_mapper: u16, number_reducer: u16, to_lower: bool, modulus_function: String) -> thread::Result<Vec<Vec<HashMap<Vec<u8>, u64>>>> {
     // Defining thread pool
     let mut handles_mapper = Vec::with_capacity(number_mapper as usize);
 
@@ -81,9 +86,11 @@ pub fn start_mapper_threads(mut chunk_vector: Vec<Vec<u8>>, number_mapper: u16, 
     for i in 0..number_mapper {
         let chunk = chunk_vector.pop().unwrap();
 
+        let modulus_function_clone = modulus_function.clone();
+
         handles_mapper.push(thread::spawn(move || {
             // Calling main mapper function + implicit return of Thread result
-            map(i, chunk, number_reducer, to_lower)
+            map(i, chunk, number_reducer, to_lower, modulus_function_clone)
         }));
     }
 
