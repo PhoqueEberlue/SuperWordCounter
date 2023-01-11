@@ -1,0 +1,739 @@
+{"dhatFileVersion":2
+,"mode":"heap","verb":"Allocated"
+,"bklt":true,"bkacc":true
+,"tu":"instrs","Mtu":"Minstr"
+,"tuth":500
+,"cmd":"./target/release/super_word_counter ./input/dups"
+,"pid":42238
+,"te":174266486544
+,"tg":76021685164
+,"pps":
+ [{"tb":472,"tbk":1
+  ,"tl":159751
+  ,"mb":472,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":2952,"wb":1350
+  ,"acc":[203,-3,151,-4,0,-8,191,-8,87,-8,12,-8,17,-16,12,-8,22,-8,13,-8,10,-16,1,-8,8,-8,3,-4,14,13,-3,5,-8,0,-2,1,-6,0,-8,5,-8,7,-8,0,-16,1,-16,0,-4,9,-20,0,-8,15,-4,6,-4,7,-8,4,-88,1,-136,0,-8,1]
+  ,"fs":[1,2,3,4,5,6,7,8,9,10,11,12,13]
+  }
+ ,{"tb":360,"tbk":2
+  ,"tl":158868
+  ,"mb":240,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":6101,"wb":4815
+  ,"fs":[1,14,15,4,5,6,7,8,9,10,11,12,13]
+  }
+ ,{"tb":1024,"tbk":1
+  ,"tl":158903
+  ,"mb":1024,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":9295,"wb":4890
+  ,"acc":[20,-548,15,-245,13,-230,12]
+  ,"fs":[1,16,17,18,19,20,15,4,5,6,7,8,9,10,11,12,13]
+  }
+ ,{"tb":32,"tbk":1
+  ,"tl":313
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":32,"wb":32
+  ,"acc":[-32,2]
+  ,"fs":[21,22,4,5,6,7,8,9,10,11,12,13]
+  }
+ ,{"tb":152,"tbk":1
+  ,"tl":290
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":24,"wb":16
+  ,"acc":[-8,3,-8,2,-136,0]
+  ,"fs":[23,24,25,26,4,5,6,7,8,9,10,11,12,13]
+  }
+ ,{"tb":32,"tbk":1
+  ,"tl":197
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":0,"wb":32
+  ,"acc":[-32,1]
+  ,"fs":[21,27,26,4,5,6,7,8,9,10,11,12,13]
+  }
+ ,{"tb":5,"tbk":1
+  ,"tl":174266022004
+  ,"mb":0,"mbk":0
+  ,"gb":5,"gbk":1
+  ,"eb":0,"ebk":0
+  ,"rb":0,"wb":6
+  ,"acc":[2,-4,1]
+  ,"fs":[1,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,13]
+  }
+ ,{"tb":48,"tbk":1
+  ,"tl":174266021819
+  ,"mb":0,"mbk":0
+  ,"gb":48,"gbk":1
+  ,"eb":0,"ebk":0
+  ,"rb":56,"wb":60
+  ,"acc":[-16,4,-8,3,-8,2,-12,1,-4,0]
+  ,"fs":[1,44,45,46,47,48,49,50,51,52,53,54,55,56,57,13]
+  }
+ ,{"tb":32,"tbk":1
+  ,"tl":174266021727
+  ,"mb":0,"mbk":0
+  ,"gb":32,"gbk":1
+  ,"eb":0,"ebk":0
+  ,"rb":32,"wb":32
+  ,"acc":[-32,2]
+  ,"fs":[23,58,59,60,61,62,63,64,65,66,67,68,69,13]
+  }
+ ,{"tb":48,"tbk":1
+  ,"tl":1139
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":48,"wb":48
+  ,"acc":[-48,2]
+  ,"fs":[1,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":47,"tbk":2
+  ,"tl":348532041222
+  ,"mb":0,"mbk":0
+  ,"gb":47,"gbk":2
+  ,"eb":0,"ebk":0
+  ,"rb":97,"wb":47
+  ,"fs":[1,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,85,86,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":96,"tbk":1
+  ,"tl":174266020141
+  ,"mb":0,"mbk":0
+  ,"gb":96,"gbk":1
+  ,"eb":0,"ebk":0
+  ,"rb":48,"wb":48
+  ,"acc":[-16,2,-8,1,-8,3,-16,2,-48,0]
+  ,"fs":[1,122,123,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":32816,"tbk":1
+  ,"tl":1960
+  ,"mb":32816,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":416,"wb":348
+  ,"fs":[1,124,125,126,127,128,129,130,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":12,"tbk":1
+  ,"tl":1932
+  ,"mb":12,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":0,"wb":12
+  ,"acc":[-12,1]
+  ,"fs":[1,133,134,135,136,137,138,139,140,141,142,143,144,145,146,130,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":48,"tbk":1
+  ,"tl":1827
+  ,"mb":48,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":240,"wb":128
+  ,"acc":[-8,28,-8,4,-8,9,-16,2,-8,1]
+  ,"fs":[1,147,148,149,150,151,152,153,130,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":20,"tbk":4
+  ,"tl":744
+  ,"mb":5,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":0,"wb":24
+  ,"acc":[8,-4,4]
+  ,"fs":[1,154,155,156,157,158,159,160,161,162,163,164,165,166,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":192,"tbk":1
+  ,"tl":214668
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":192,"wb":192
+  ,"acc":[-192,2]
+  ,"fs":[1,167,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":32816,"tbk":1
+  ,"tl":7670
+  ,"mb":32816,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":416,"wb":348
+  ,"fs":[1,124,125,126,127,128,129,168,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":12,"tbk":1
+  ,"tl":7642
+  ,"mb":12,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":48,"wb":12
+  ,"acc":[-12,5]
+  ,"fs":[1,133,134,135,136,137,138,139,140,141,142,143,144,145,146,168,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":48,"tbk":1
+  ,"tl":7537
+  ,"mb":48,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":304,"wb":128
+  ,"acc":[-8,28,-8,4,-8,9,-8,6,-8,2,-8,5]
+  ,"fs":[1,147,148,149,150,151,152,153,168,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":20,"tbk":4
+  ,"tl":2408
+  ,"mb":5,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":20,"wb":24
+  ,"acc":[16,-3,8,4]
+  ,"fs":[1,154,155,156,157,158,159,160,161,162,163,164,165,169,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":144,"tbk":8
+  ,"tl":5583
+  ,"mb":24,"mbk":1
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":120,"wb":116
+  ,"fs":[1,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":32768,"tbk":4
+  ,"tl":479175
+  ,"mb":32768,"mbk":4
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":60411,"wb":57344
+  ,"fs":[1,188,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":192,"tbk":1
+  ,"tl":174027670631
+  ,"mb":0,"mbk":0
+  ,"gb":192,"gbk":1
+  ,"eb":0,"ebk":0
+  ,"rb":192,"wb":192
+  ,"acc":[-192,2]
+  ,"fs":[1,189,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":716454336,"tbk":2
+  ,"tl":136142083541
+  ,"mb":477636224,"mbk":1
+  ,"gb":477636224,"gbk":1
+  ,"eb":0,"ebk":0
+  ,"rb":477639120,"wb":477639120
+  ,"fs":[1,190,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":1671726784,"tbk":7
+  ,"tl":1047006229449
+  ,"mb":1671726784,"mbk":7
+  ,"gb":1671726784,"gbk":7
+  ,"eb":0,"ebk":0
+  ,"rb":1671723088,"wb":1671723088
+  ,"fs":[1,191,131,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":192,"tbk":1
+  ,"tl":174027463952
+  ,"mb":0,"mbk":0
+  ,"gb":192,"gbk":1
+  ,"eb":0,"ebk":0
+  ,"rb":192,"wb":192
+  ,"acc":[-192,2]
+  ,"fs":[1,192,193,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":384,"tbk":8
+  ,"tl":1361501206566
+  ,"mb":0,"mbk":0
+  ,"gb":384,"gbk":8
+  ,"eb":0,"ebk":0
+  ,"rb":704,"wb":608
+  ,"acc":[-8,80,-8,32,-8,24,-8,16,-12,8,-4,0]
+  ,"fs":[1,194,195,196,197,198,199,200,201,202,203,193,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":448,"tbk":8
+  ,"tl":1361501206782
+  ,"mb":0,"mbk":0
+  ,"gb":448,"gbk":8
+  ,"eb":0,"ebk":0
+  ,"rb":1344,"wb":1216
+  ,"acc":[-8,88,-8,56,-8,32,-8,72,-24,24]
+  ,"fs":[1,204,203,193,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":448,"tbk":8
+  ,"tl":1183147249601
+  ,"mb":0,"mbk":0
+  ,"gb":448,"gbk":8
+  ,"eb":0,"ebk":0
+  ,"rb":576,"wb":448
+  ,"acc":[-8,24,-40,16,-8,24]
+  ,"fs":[1,205,203,193,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":128,"tbk":8
+  ,"tl":1183147249273
+  ,"mb":0,"mbk":0
+  ,"gb":128,"gbk":8
+  ,"eb":0,"ebk":0
+  ,"rb":128,"wb":128
+  ,"acc":[-16,16]
+  ,"fs":[1,206,207,208,209,210,211,203,193,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":2304,"tbk":8
+  ,"tl":1394126403618
+  ,"mb":0,"mbk":0
+  ,"gb":2304,"gbk":8
+  ,"eb":0,"ebk":0
+  ,"rb":4352,"wb":3136
+  ,"acc":[-8,296,-8,0,-8,24,-8,8,-32,40,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24,-8,8,-8,24]
+  ,"fs":[23,212,213,214,215,216,217,211,203,193,132,87,88,89,90,91,92,93,94,95,96,97]
+  }
+ ,{"tb":32,"tbk":1
+  ,"tl":174027448936
+  ,"mb":0,"mbk":0
+  ,"gb":32,"gbk":1
+  ,"eb":0,"ebk":0
+  ,"rb":0,"wb":32
+  ,"acc":[-32,1]
+  ,"fs":[1,218,193,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":192,"tbk":1
+  ,"tl":174261842490
+  ,"mb":0,"mbk":0
+  ,"gb":192,"gbk":1
+  ,"eb":0,"ebk":0
+  ,"rb":1216,"wb":704
+  ,"acc":[-8,10,-8,2,-8,18,-8,10,-8,2,-8,18,-8,10,-8,2,-8,18,-8,10,-8,2,-8,18,-8,10,-8,2,-8,18,-8,10,-8,2,-8,18,-8,10,-8,2,-8,18,-8,10,-8,2,-8,18]
+  ,"fs":[1,219,193,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":256,"tbk":8
+  ,"tl":2504
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":256,"wb":256
+  ,"acc":[-32,16]
+  ,"fs":[21,22,220,221,222,223,224,225,226]
+  }
+ ,{"tb":1216,"tbk":8
+  ,"tl":2480
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":192,"wb":128
+  ,"acc":[-8,24,-8,16,-136,0]
+  ,"fs":[23,24,25,26,220,221,222,223,224,225,226]
+  }
+ ,{"tb":256,"tbk":8
+  ,"tl":1736
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":0,"wb":256
+  ,"acc":[-32,8]
+  ,"fs":[21,27,26,220,221,222,223,224,225,226]
+  }
+ ,{"tb":256,"tbk":8
+  ,"tl":1160639279744
+  ,"mb":0,"mbk":0
+  ,"gb":256,"gbk":8
+  ,"eb":0,"ebk":0
+  ,"rb":256,"wb":256
+  ,"acc":[-32,16]
+  ,"fs":[23,58,59,60,61,62,63,227,222,223,224,225,226]
+  }
+ ,{"tb":3072,"tbk":8
+  ,"tl":1371586822827
+  ,"mb":0,"mbk":0
+  ,"gb":3072,"gbk":8
+  ,"eb":0,"ebk":0
+  ,"rb":9070492032,"wb":9578368
+  ,"acc":[-32,65528,-8,48152,-8,32280,-32,65528,-8,1976,-8,1496,-32,65528,-8,24728,-8,38496,-32,65528,-8,58176,-8,60808,-32,65528,-8,37016,-8,24856,-32,65528,-8,35552,-8,23880,-32,65528,-8,2128,-8,45288,-32,65528,-8,11608,-8,51608]
+  ,"fs":[1,228,229,230,222,223,224,225,226]
+  }
+ ,{"tb":1753938048,"tbk":203488992
+  ,"tl":49529316708467409
+  ,"mb":3089344,"mbk":274635
+  ,"gb":3453848,"gbk":304514
+  ,"eb":0,"ebk":0
+  ,"rb":2800454887,"wb":967411104
+  ,"fs":[1,231,232,233,229,230,222,223,224,225,226]
+  }
+ ,{"tb":64885376,"tbk":824
+  ,"tl":10965032552637
+  ,"mb":32711696,"mbk":65
+  ,"gb":32711696,"gbk":65
+  ,"eb":0,"ebk":0
+  ,"rb":11395294978,"wb":2310222078
+  ,"fs":[1,234,235,236,229,230,222,223,224,225,226]
+  }
+ ,{"tb":926158080,"tbk":105088032
+  ,"tl":44128209624641932
+  ,"mb":2017224,"mbk":211346
+  ,"gb":2711528,"gbk":284075
+  ,"eb":0,"ebk":0
+  ,"rb":1413561515,"wb":573766800
+  ,"fs":[1,231,232,237,229,230,222,223,224,225,226]
+  }
+ ,{"tb":192,"tbk":1
+  ,"tl":188786209
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":192,"wb":192
+  ,"acc":[-192,2]
+  ,"fs":[1,238,239,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":3072,"tbk":8
+  ,"tl":742454573
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":3072,"wb":3072
+  ,"acc":[-384,16]
+  ,"fs":[1,240,239,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":384,"tbk":8
+  ,"tl":1414661897
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":704,"wb":608
+  ,"acc":[-8,80,-8,32,-8,24,-8,16,-12,8,-4,0]
+  ,"fs":[1,194,195,196,197,198,199,200,201,241,242,239,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":640,"tbk":8
+  ,"tl":1414662049
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":1536,"wb":1600
+  ,"acc":[-8,88,-8,56,-8,32,-8,72,-48,24]
+  ,"fs":[1,243,242,239,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":384,"tbk":8
+  ,"tl":742450149
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":512,"wb":384
+  ,"acc":[-8,24,-32,16,-8,24]
+  ,"fs":[1,244,242,239,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":128,"tbk":8
+  ,"tl":742449837
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":128,"wb":128
+  ,"acc":[-16,16]
+  ,"fs":[1,206,207,208,209,210,245,242,239,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":256,"tbk":8
+  ,"tl":2464
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":256,"wb":256
+  ,"acc":[-32,16]
+  ,"fs":[21,22,220,246,222,223,224,225,226]
+  }
+ ,{"tb":1216,"tbk":8
+  ,"tl":2440
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":192,"wb":128
+  ,"acc":[-8,24,-8,16,-136,0]
+  ,"fs":[23,24,25,26,220,246,222,223,224,225,226]
+  }
+ ,{"tb":256,"tbk":8
+  ,"tl":1696
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":0,"wb":256
+  ,"acc":[-32,8]
+  ,"fs":[21,27,26,220,246,222,223,224,225,226]
+  }
+ ,{"tb":256,"tbk":8
+  ,"tl":188753932
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":256,"wb":256
+  ,"acc":[-32,16]
+  ,"fs":[23,58,59,60,61,62,63,247,222,223,224,225,226]
+  }
+ ,{"tb":384,"tbk":1
+  ,"tl":210487824
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":608,"wb":832
+  ,"acc":[-16,1,-16,6,-8,4,-8,6,-16,1,-16,6,-8,4,-8,6,-16,1,-16,6,-8,4,-8,6,-16,1,-16,6,-8,4,-8,6,-16,1,-16,6,-8,4,-8,6,-16,1,-16,6,-8,4,-8,6,-16,1,-16,6,-8,4,-8,6,-48,2]
+  ,"fs":[1,248,239,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ,{"tb":7569456,"tbk":3
+  ,"tl":68415008
+  ,"mb":0,"mbk":0
+  ,"gb":0,"gbk":0
+  ,"eb":0,"ebk":0
+  ,"rb":9513515,"wb":5690402
+  ,"fs":[1,234,249,250,239,132,87,88,89,90,91,92,93,94,95,96,97,13]
+  }
+ ]
+,"ftbl":
+ ["[root]"
+ ,"0x4841888: malloc (in /usr/lib/valgrind/vgpreload_dhat-amd64-linux.so)"
+ ,"0x491927F: __fopen_internal (iofopen.c:65)"
+ ,"0x492DD93: pthread_getattr_np@@GLIBC_2.32 (pthread_getattr_np.c:85)"
+ ,"0x12D391: get_stack_start (thread.rs:719)"
+ ,"0x12D391: get_stack_start_aligned (thread.rs:736)"
+ ,"0x12D391: init (thread.rs:768)"
+ ,"0x12D391: init (rt.rs:99)"
+ ,"0x12D391: {closure#1} (rt.rs:147)"
+ ,"0x12D391: do_call<std::rt::lang_start_internal::{closure_env#1}, ()> (panicking.rs:483)"
+ ,"0x12D391: try<(), std::rt::lang_start_internal::{closure_env#1}> (panicking.rs:447)"
+ ,"0x12D391: catch_unwind<std::rt::lang_start_internal::{closure_env#1}, ()> (panic.rs:137)"
+ ,"0x12D391: std::rt::lang_start_internal (rt.rs:147)"
+ ,"0x114264: main (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x4919D83: getdelim (iogetdelim.c:62)"
+ ,"0x492DEC4: pthread_getattr_np@@GLIBC_2.32 (pthread_getattr_np.c:122)"
+ ,"0x4918920: _IO_file_doallocate (filedoalloc.c:101)"
+ ,"0x49265CF: _IO_doallocbuf (genops.c:347)"
+ ,"0x49265CF: _IO_doallocbuf (genops.c:342)"
+ ,"0x49256EC: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)"
+ ,"0x4919F57: getdelim (iogetdelim.c:73)"
+ ,"0x4841798: malloc (in /usr/lib/valgrind/vgpreload_dhat-amd64-linux.so)"
+ ,"0x492DC9A: pthread_getattr_np@@GLIBC_2.32 (pthread_getattr_np.c:180)"
+ ,"0x4846A73: calloc (in /usr/lib/valgrind/vgpreload_dhat-amd64-linux.so)"
+ ,"0x492A523: __pthread_attr_extension (pthread_attr_extension.c:28)"
+ ,"0x492A83F: pthread_attr_setaffinity_np@@GLIBC_2.32 (pthread_attr_setaffinity.c:45)"
+ ,"0x492DD05: pthread_getattr_np@@GLIBC_2.32 (pthread_getattr_np.c:194)"
+ ,"0x492A859: pthread_attr_setaffinity_np@@GLIBC_2.32 (pthread_attr_setaffinity.c:51)"
+ ,"0x14B20F: alloc (alloc.rs:99)"
+ ,"0x14B20F: alloc_impl (alloc.rs:181)"
+ ,"0x14B20F: allocate (alloc.rs:241)"
+ ,"0x14B20F: allocate_in<u8, alloc::alloc::Global> (raw_vec.rs:185)"
+ ,"0x14B20F: with_capacity_in<u8, alloc::alloc::Global> (raw_vec.rs:131)"
+ ,"0x14B20F: with_capacity_in<u8, alloc::alloc::Global> (mod.rs:673)"
+ ,"0x14B20F: with_capacity<u8> (mod.rs:483)"
+ ,"0x14B20F: spec_new_impl_bytes (c_str.rs:287)"
+ ,"0x14B20F: <&str as alloc::ffi::c_str::CString::new::SpecNewImpl>::spec_new_impl (c_str.rs:306)"
+ ,"0x12D43F: new<&str> (c_str.rs:316)"
+ ,"0x12D43F: init (rt.rs:104)"
+ ,"0x12D43F: {closure#1} (rt.rs:147)"
+ ,"0x12D43F: do_call<std::rt::lang_start_internal::{closure_env#1}, ()> (panicking.rs:483)"
+ ,"0x12D43F: try<(), std::rt::lang_start_internal::{closure_env#1}> (panicking.rs:447)"
+ ,"0x12D43F: catch_unwind<std::rt::lang_start_internal::{closure_env#1}, ()> (panic.rs:137)"
+ ,"0x12D43F: std::rt::lang_start_internal (rt.rs:147)"
+ ,"0x12D46F: alloc (alloc.rs:99)"
+ ,"0x12D46F: alloc_impl (alloc.rs:181)"
+ ,"0x12D46F: allocate (alloc.rs:241)"
+ ,"0x12D46F: {closure#0}<std::thread::Inner> (sync.rs:497)"
+ ,"0x12D46F: try_allocate_for_layout<core::mem::maybe_uninit::MaybeUninit<std::thread::Inner>, alloc::sync::{impl#13}::new_uninit::{closure_env#0}<std::thread::Inner>, alloc::sync::{impl#13}::new_uninit::{closure_env#1}<std::thread::Inner>> (sync.rs:1185)"
+ ,"0x12D46F: allocate_for_layout<core::mem::maybe_uninit::MaybeUninit<std::thread::Inner>, alloc::sync::{impl#13}::new_uninit::{closure_env#0}<std::thread::Inner>, alloc::sync::{impl#13}::new_uninit::{closure_env#1}<std::thread::Inner>> (sync.rs:1163)"
+ ,"0x12D46F: new_uninit<std::thread::Inner> (sync.rs:495)"
+ ,"0x12D46F: new (mod.rs:1216)"
+ ,"0x12D46F: init (rt.rs:104)"
+ ,"0x12D46F: {closure#1} (rt.rs:147)"
+ ,"0x12D46F: do_call<std::rt::lang_start_internal::{closure_env#1}, ()> (panicking.rs:483)"
+ ,"0x12D46F: try<(), std::rt::lang_start_internal::{closure_env#1}> (panicking.rs:447)"
+ ,"0x12D46F: catch_unwind<std::rt::lang_start_internal::{closure_env#1}, ()> (panic.rs:137)"
+ ,"0x12D46F: std::rt::lang_start_internal (rt.rs:147)"
+ ,"0x48E0BD3: __cxa_thread_atexit_impl (cxa_thread_atexit_impl.c:107)"
+ ,"0x13278E: register_dtor<core::cell::RefCell<core::option::Option<std::sys_common::thread_info::ThreadInfo>>> (local.rs:956)"
+ ,"0x13278E: __getit (local.rs:241)"
+ ,"0x13278E: try_with<core::cell::RefCell<core::option::Option<std::sys_common::thread_info::ThreadInfo>>, std::sys_common::thread_info::set::{closure_env#0}, ()> (local.rs:445)"
+ ,"0x13278E: with<core::cell::RefCell<core::option::Option<std::sys_common::thread_info::ThreadInfo>>, std::sys_common::thread_info::set::{closure_env#0}, ()> (local.rs:422)"
+ ,"0x13278E: std::sys_common::thread_info::set (thread_info.rs:42)"
+ ,"0x12D4D7: init (rt.rs:105)"
+ ,"0x12D4D7: {closure#1} (rt.rs:147)"
+ ,"0x12D4D7: do_call<std::rt::lang_start_internal::{closure_env#1}, ()> (panicking.rs:483)"
+ ,"0x12D4D7: try<(), std::rt::lang_start_internal::{closure_env#1}> (panicking.rs:447)"
+ ,"0x12D4D7: catch_unwind<std::rt::lang_start_internal::{closure_env#1}, ()> (panic.rs:137)"
+ ,"0x12D4D7: std::rt::lang_start_internal (rt.rs:147)"
+ ,"0x12E238: alloc (alloc.rs:99)"
+ ,"0x12E238: alloc_impl (alloc.rs:181)"
+ ,"0x12E238: allocate (alloc.rs:241)"
+ ,"0x12E238: allocate_in<std::ffi::os_str::OsString, alloc::alloc::Global> (raw_vec.rs:185)"
+ ,"0x12E238: with_capacity_in<std::ffi::os_str::OsString, alloc::alloc::Global> (raw_vec.rs:131)"
+ ,"0x12E238: with_capacity_in<std::ffi::os_str::OsString, alloc::alloc::Global> (mod.rs:673)"
+ ,"0x12E238: with_capacity<std::ffi::os_str::OsString> (mod.rs:483)"
+ ,"0x12E238: from_iter<std::ffi::os_str::OsString, core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>> (spec_from_iter_nested.rs:54)"
+ ,"0x12E238: from_iter<std::ffi::os_str::OsString, core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>> (spec_from_iter.rs:33)"
+ ,"0x12E238: from_iter<std::ffi::os_str::OsString, core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>> (mod.rs:2757)"
+ ,"0x12E238: collect<core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>, alloc::vec::Vec<std::ffi::os_str::OsString, alloc::alloc::Global>> (iterator.rs:1836)"
+ ,"0x12E238: clone (args.rs:144)"
+ ,"0x12E238: args (args.rs:129)"
+ ,"0x12E238: args (args.rs:19)"
+ ,"0x12E238: std::env::args_os (env.rs:792)"
+ ,"0x12E1B0: std::env::args (env.rs:757)"
+ ,"0x114135: super_word_counter::main (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x114832: std::sys_common::backtrace::__rust_begin_short_backtrace (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x114448: std::rt::lang_start::{{closure}} (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x12D4EA: call_once<(), (dyn core::ops::function::Fn<(), Output=i32> + core::marker::Sync + core::panic::unwind_safe::RefUnwindSafe)> (function.rs:286)"
+ ,"0x12D4EA: do_call<&(dyn core::ops::function::Fn<(), Output=i32> + core::marker::Sync + core::panic::unwind_safe::RefUnwindSafe), i32> (panicking.rs:483)"
+ ,"0x12D4EA: try<i32, &(dyn core::ops::function::Fn<(), Output=i32> + core::marker::Sync + core::panic::unwind_safe::RefUnwindSafe)> (panicking.rs:447)"
+ ,"0x12D4EA: catch_unwind<&(dyn core::ops::function::Fn<(), Output=i32> + core::marker::Sync + core::panic::unwind_safe::RefUnwindSafe), i32> (panic.rs:137)"
+ ,"0x12D4EA: {closure#2} (rt.rs:148)"
+ ,"0x12D4EA: do_call<std::rt::lang_start_internal::{closure_env#2}, isize> (panicking.rs:483)"
+ ,"0x12D4EA: try<isize, std::rt::lang_start_internal::{closure_env#2}> (panicking.rs:447)"
+ ,"0x12D4EA: catch_unwind<std::rt::lang_start_internal::{closure_env#2}, isize> (panic.rs:137)"
+ ,"0x12D4EA: std::rt::lang_start_internal (rt.rs:148)"
+ ,"0x12E2F8: alloc (alloc.rs:99)"
+ ,"0x12E2F8: alloc_impl (alloc.rs:181)"
+ ,"0x12E2F8: allocate (alloc.rs:241)"
+ ,"0x12E2F8: allocate_in<u8, alloc::alloc::Global> (raw_vec.rs:185)"
+ ,"0x12E2F8: with_capacity_in<u8, alloc::alloc::Global> (raw_vec.rs:131)"
+ ,"0x12E2F8: with_capacity_in<u8, alloc::alloc::Global> (mod.rs:673)"
+ ,"0x12E2F8: to_vec<u8, alloc::alloc::Global> (slice.rs:157)"
+ ,"0x12E2F8: to_vec<u8, alloc::alloc::Global> (slice.rs:106)"
+ ,"0x12E2F8: to_vec_in<u8, alloc::alloc::Global> (slice.rs:436)"
+ ,"0x12E2F8: to_vec<u8> (slice.rs:411)"
+ ,"0x12E2F8: {closure#0} (args.rs:147)"
+ ,"0x12E2F8: {closure#0}<isize, std::ffi::os_str::OsString, (), std::sys::unix::args::imp::clone::{closure_env#0}, core::iter::traits::iterator::Iterator::for_each::call::{closure_env#0}<std::ffi::os_str::OsString, alloc::vec::spec_extend::{impl#1}::spec_extend::{closure_env#0}<std::ffi::os_str::OsString, core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>, alloc::alloc::Global>>> (map.rs:84)"
+ ,"0x12E2F8: fold<core::ops::range::Range<isize>, (), core::iter::adapters::map::map_fold::{closure_env#0}<isize, std::ffi::os_str::OsString, (), std::sys::unix::args::imp::clone::{closure_env#0}, core::iter::traits::iterator::Iterator::for_each::call::{closure_env#0}<std::ffi::os_str::OsString, alloc::vec::spec_extend::{impl#1}::spec_extend::{closure_env#0}<std::ffi::os_str::OsString, core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>, alloc::alloc::Global>>>> (iterator.rs:2414)"
+ ,"0x12E2F8: fold<std::ffi::os_str::OsString, core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}, (), core::iter::traits::iterator::Iterator::for_each::call::{closure_env#0}<std::ffi::os_str::OsString, alloc::vec::spec_extend::{impl#1}::spec_extend::{closure_env#0}<std::ffi::os_str::OsString, core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>, alloc::alloc::Global>>> (map.rs:124)"
+ ,"0x12E2F8: for_each<core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>, alloc::vec::spec_extend::{impl#1}::spec_extend::{closure_env#0}<std::ffi::os_str::OsString, core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>, alloc::alloc::Global>> (iterator.rs:831)"
+ ,"0x12E2F8: spec_extend<std::ffi::os_str::OsString, core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>, alloc::alloc::Global> (spec_extend.rs:40)"
+ ,"0x12E2F8: from_iter<std::ffi::os_str::OsString, core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>> (spec_from_iter_nested.rs:62)"
+ ,"0x12E2F8: from_iter<std::ffi::os_str::OsString, core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>> (spec_from_iter.rs:33)"
+ ,"0x12E2F8: from_iter<std::ffi::os_str::OsString, core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>> (mod.rs:2757)"
+ ,"0x12E2F8: collect<core::iter::adapters::map::Map<core::ops::range::Range<isize>, std::sys::unix::args::imp::clone::{closure_env#0}>, alloc::vec::Vec<std::ffi::os_str::OsString, alloc::alloc::Global>> (iterator.rs:1836)"
+ ,"0x12E2F8: clone (args.rs:144)"
+ ,"0x12E2F8: args (args.rs:129)"
+ ,"0x12E2F8: args (args.rs:19)"
+ ,"0x12E2F8: std::env::args_os (env.rs:792)"
+ ,"0x1191F8: <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_iter (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x114158: super_word_counter::main (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x4974055: __alloc_dir (opendir.c:115)"
+ ,"0x49740C1: opendir_tail (opendir.c:63)"
+ ,"0x134EDD: {closure#0} (fs.rs:1344)"
+ ,"0x134EDD: run_with_cstr<*mut libc::unix::DIR, std::sys::unix::fs::readdir::{closure_env#0}> (small_c_string.rs:43)"
+ ,"0x134EDD: run_path_with_cstr<*mut libc::unix::DIR, std::sys::unix::fs::readdir::{closure_env#0}> (small_c_string.rs:22)"
+ ,"0x134EDD: std::sys::unix::fs::readdir (fs.rs:1344)"
+ ,"0x117BF9: super_word_counter::swc::splitter::split_files_from_path (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x114BC6: super_word_counter::swc::launch_map_reduce (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x114184: super_word_counter::main (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x134F14: alloc (alloc.rs:99)"
+ ,"0x134F14: alloc_impl (alloc.rs:181)"
+ ,"0x134F14: allocate (alloc.rs:241)"
+ ,"0x134F14: allocate_in<u8, alloc::alloc::Global> (raw_vec.rs:185)"
+ ,"0x134F14: with_capacity_in<u8, alloc::alloc::Global> (raw_vec.rs:131)"
+ ,"0x134F14: with_capacity_in<u8, alloc::alloc::Global> (mod.rs:673)"
+ ,"0x134F14: to_vec<u8, alloc::alloc::Global> (slice.rs:157)"
+ ,"0x134F14: to_vec<u8, alloc::alloc::Global> (slice.rs:106)"
+ ,"0x134F14: to_vec_in<u8, alloc::alloc::Global> (slice.rs:436)"
+ ,"0x134F14: to_vec<u8> (slice.rs:411)"
+ ,"0x134F14: to_owned (os_str.rs:213)"
+ ,"0x134F14: to_os_string (os_str.rs:776)"
+ ,"0x134F14: to_path_buf (path.rs:2063)"
+ ,"0x134F14: std::sys::unix::fs::readdir (fs.rs:1348)"
+ ,"0x134F82: alloc (alloc.rs:99)"
+ ,"0x134F82: alloc_impl (alloc.rs:181)"
+ ,"0x134F82: allocate (alloc.rs:241)"
+ ,"0x134F82: exchange_malloc (alloc.rs:330)"
+ ,"0x134F82: new<alloc::sync::ArcInner<std::sys::unix::fs::InnerReadDir>> (boxed.rs:218)"
+ ,"0x134F82: new<std::sys::unix::fs::InnerReadDir> (sync.rs:355)"
+ ,"0x134F82: std::sys::unix::fs::readdir (fs.rs:1351)"
+ ,"0x14B4C7: alloc (alloc.rs:99)"
+ ,"0x14B4C7: alloc_impl (alloc.rs:181)"
+ ,"0x14B4C7: allocate (alloc.rs:241)"
+ ,"0x14B4C7: allocate_in<u8, alloc::alloc::Global> (raw_vec.rs:185)"
+ ,"0x14B4C7: with_capacity_in<u8, alloc::alloc::Global> (raw_vec.rs:131)"
+ ,"0x14B4C7: with_capacity<u8> (raw_vec.rs:93)"
+ ,"0x14B4C7: from<u8> (boxed.rs:1498)"
+ ,"0x14B4C7: into<&[u8], alloc::boxed::Box<[u8], alloc::alloc::Global>> (mod.rs:726)"
+ ,"0x14B4C7: to_owned (c_str.rs:1021)"
+ ,"0x14B4C7: alloc::ffi::c_str::<impl alloc::borrow::ToOwned for core::ffi::c_str::CStr>::to_owned (c_str.rs:1034)"
+ ,"0x134BB5: <std::sys::unix::fs::ReadDir as core::iter::traits::iterator::Iterator>::next (fs.rs:659)"
+ ,"0x12E812: <std::fs::ReadDir as core::iter::traits::iterator::Iterator>::next (fs.rs:1604)"
+ ,"0x117C89: super_word_counter::swc::splitter::split_files_from_path (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x117DA8: super_word_counter::swc::splitter::split_files_from_path (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x117DEB: super_word_counter::swc::splitter::split_files_from_path (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x117EE9: super_word_counter::swc::splitter::split_files_from_path (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x131888: alloc (alloc.rs:99)"
+ ,"0x131888: alloc_impl (alloc.rs:181)"
+ ,"0x131888: allocate (alloc.rs:241)"
+ ,"0x131888: allocate_in<u8, alloc::alloc::Global> (raw_vec.rs:185)"
+ ,"0x131888: with_capacity_in<u8, alloc::alloc::Global> (raw_vec.rs:131)"
+ ,"0x131888: with_capacity_in<u8, alloc::alloc::Global> (mod.rs:673)"
+ ,"0x131888: to_vec<u8, alloc::alloc::Global> (slice.rs:157)"
+ ,"0x131888: to_vec<u8, alloc::alloc::Global> (slice.rs:106)"
+ ,"0x131888: to_vec_in<u8, alloc::alloc::Global> (slice.rs:436)"
+ ,"0x131888: to_vec<u8> (slice.rs:411)"
+ ,"0x131888: to_owned (os_str.rs:213)"
+ ,"0x131888: to_os_string (os_str.rs:776)"
+ ,"0x131888: to_path_buf (path.rs:2063)"
+ ,"0x131888: std::path::Path::_join (path.rs:2449)"
+ ,"0x12E8A2: join<&std::ffi::os_str::OsStr> (path.rs:2445)"
+ ,"0x12E8A2: path (fs.rs:718)"
+ ,"0x12E8A2: std::fs::DirEntry::path (fs.rs:1640)"
+ ,"0x117F40: super_word_counter::swc::splitter::split_files_from_path (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x11806D: super_word_counter::swc::splitter::split_files_from_path (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x1181EF: super_word_counter::swc::splitter::split_files_from_path (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x118232: super_word_counter::swc::splitter::split_files_from_path (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x1184ED: super_word_counter::swc::splitter::split_files_from_path (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x11A2B9: super_word_counter::swc::mapper::start_mapper_threads (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x114C05: super_word_counter::swc::launch_map_reduce (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x12DBE6: alloc (alloc.rs:99)"
+ ,"0x12DBE6: alloc_impl (alloc.rs:181)"
+ ,"0x12DBE6: allocate (alloc.rs:241)"
+ ,"0x12DBE6: {closure#0}<std::thread::Inner> (sync.rs:497)"
+ ,"0x12DBE6: try_allocate_for_layout<core::mem::maybe_uninit::MaybeUninit<std::thread::Inner>, alloc::sync::{impl#13}::new_uninit::{closure_env#0}<std::thread::Inner>, alloc::sync::{impl#13}::new_uninit::{closure_env#1}<std::thread::Inner>> (sync.rs:1185)"
+ ,"0x12DBE6: allocate_for_layout<core::mem::maybe_uninit::MaybeUninit<std::thread::Inner>, alloc::sync::{impl#13}::new_uninit::{closure_env#0}<std::thread::Inner>, alloc::sync::{impl#13}::new_uninit::{closure_env#1}<std::thread::Inner>> (sync.rs:1163)"
+ ,"0x12DBE6: new_uninit<std::thread::Inner> (sync.rs:495)"
+ ,"0x12DBE6: std::thread::Thread::new (mod.rs:1216)"
+ ,"0x1162DC: std::thread::spawn (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x11A39F: super_word_counter::swc::mapper::start_mapper_threads (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x116321: std::thread::spawn (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x116450: std::thread::spawn (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x1360F5: alloc (alloc.rs:99)"
+ ,"0x1360F5: alloc_impl (alloc.rs:181)"
+ ,"0x1360F5: allocate (alloc.rs:241)"
+ ,"0x1360F5: exchange_malloc (alloc.rs:330)"
+ ,"0x1360F5: std::sys::unix::thread::Thread::new (thread.rs:52)"
+ ,"0x116496: std::thread::spawn (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x4011282: calloc (rtld-malloc.h:44)"
+ ,"0x4011282: allocate_dtv (dl-tls.c:375)"
+ ,"0x4011C91: _dl_allocate_tls (dl-tls.c:634)"
+ ,"0x492D4DF: allocate_stack (allocatestack.c:423)"
+ ,"0x492D4DF: pthread_create@@GLIBC_2.34 (pthread_create.c:650)"
+ ,"0x1361E0: std::sys::unix::thread::Thread::new (thread.rs:87)"
+ ,"0x11A3F9: super_word_counter::swc::mapper::start_mapper_threads (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x11A483: super_word_counter::swc::mapper::start_mapper_threads (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x1365E3: std::sys::unix::thread::guard::current (thread.rs:856)"
+ ,"0x116907: core::ops::function::FnOnce::call_once{{vtable.shim}} (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x136372: call_once<(), dyn core::ops::function::FnOnce<(), Output=()>, alloc::alloc::Global> (boxed.rs:1987)"
+ ,"0x136372: call_once<(), alloc::boxed::Box<dyn core::ops::function::FnOnce<(), Output=()>, alloc::alloc::Global>, alloc::alloc::Global> (boxed.rs:1987)"
+ ,"0x136372: std::sys::unix::thread::Thread::new::thread_start (thread.rs:108)"
+ ,"0x492C8FC: start_thread (pthread_create.c:442)"
+ ,"0x49ADC73: clone (clone.S:100)"
+ ,"0x116916: core::ops::function::FnOnce::call_once{{vtable.shim}} (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x119D8C: super_word_counter::swc::mapper::map (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x114873: std::sys_common::backtrace::__rust_begin_short_backtrace (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x116939: core::ops::function::FnOnce::call_once{{vtable.shim}} (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x111AFC: alloc::raw_vec::finish_grow (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x111E46: alloc::raw_vec::RawVec<T,A>::reserve_for_push (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x11A11B: super_word_counter::swc::mapper::map (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x10F744: hashbrown::raw::RawTable<T,A>::reserve_rehash (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x114B5E: hashbrown::rustc_entry::<impl hashbrown::map::HashMap<K,V,S,A>>::rustc_entry (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x11A002: super_word_counter::swc::mapper::map (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x11A0D1: super_word_counter::swc::mapper::map (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x112F7E: super_word_counter::swc::reducer::launch_reducer_threads (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x114C41: super_word_counter::swc::launch_map_reduce (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x11302F: super_word_counter::swc::reducer::launch_reducer_threads (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x115E3F: std::thread::spawn (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x113162: super_word_counter::swc::reducer::launch_reducer_threads (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x115E83: std::thread::spawn (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x115FC1: std::thread::spawn (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x115FFA: std::thread::spawn (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x11671B: core::ops::function::FnOnce::call_once{{vtable.shim}} (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x11672D: core::ops::function::FnOnce::call_once{{vtable.shim}} (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x1131AE: super_word_counter::swc::reducer::launch_reducer_threads (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x1122AD: hashbrown::raw::RawTable<T,A>::insert (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ,"0x1137B6: super_word_counter::swc::reducer::launch_reducer_threads (in /home/andrewmhdb/git_clones/super_word_counter/target/release/super_word_counter)"
+ ]
+}
