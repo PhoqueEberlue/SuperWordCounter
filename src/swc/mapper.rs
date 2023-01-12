@@ -107,11 +107,5 @@ pub fn start_mapper_threads(mut chunk_vector: Vec<Vec<u8>>, number_mapper: u16, 
         hash_map_vector_vector.push(hash_map_vector);
     }
 
-
-    #[cfg(debug_assertions)]
-    for (i, len_hash_map) in len_hash_map_vec.iter().enumerate() {
-        println!("Reducer {} will receive {} words", i, len_hash_map);
-    }
-
     Ok(hash_map_vector_vector)
 }

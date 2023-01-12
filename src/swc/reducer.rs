@@ -26,7 +26,7 @@ pub fn launch_reducer_threads(mut hash_map_vector_vector: Vec<Vec<HashMap<Vec<u8
     for _ in 0..number_reducer {
         let mut reducer_hash_map_vector: Vec<HashMap<Vec<u8>, u64>> = Vec::with_capacity(number_reducer as usize);
 
-        for i in 0..number_reducer {
+        for i in 0..hash_map_vector_vector.len() {
             let hash_map_vector: &mut Vec<HashMap<Vec<u8>, u64>> = hash_map_vector_vector.get_mut(i as usize).unwrap();
 
             reducer_hash_map_vector.push(hash_map_vector.pop().unwrap());
@@ -57,7 +57,7 @@ pub fn launch_reducer_threads(mut hash_map_vector_vector: Vec<Vec<HashMap<Vec<u8
     for val in hash_map_final.keys() {
         let v = hash_map_final.get(val).unwrap();
 
-        if *v > 1000 {
+        if *v > 100 {
             println!("{:?}: {}", String::from_utf8(val.clone()).unwrap(), v);
         }
     }
