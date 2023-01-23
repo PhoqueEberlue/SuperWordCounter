@@ -15,7 +15,7 @@ School project implementing a word counter based on the map-reduce principle usi
 ├── benchmark              Folder for benchmark outputs
 │   ├── dhat               Valgrind dynamic heap analysis out
 │   ├── flamegraph         Flamegraph of the program
-│   └── time-comparator    Jupyter Notebook for time comparison
+│   └── time-comparator    Time comparison with single threaded
 └── src                    Source code of the project
     ├── main.rs            Main file
     └── swc
